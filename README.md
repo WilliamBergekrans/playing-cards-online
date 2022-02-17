@@ -1,2 +1,5 @@
-# playing-cards-online
-Web application for playing cards online
+# Playing Cards Online WIP
+
+A web application for playing cards online.
+
+This is a project for learning React.
