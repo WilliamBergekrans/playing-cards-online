@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { green, lime } from "@mui/material/colors";
+import { green, blue } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: lime[500],
+      main: blue[900],
     },
     secondary: {
       main: green[500],

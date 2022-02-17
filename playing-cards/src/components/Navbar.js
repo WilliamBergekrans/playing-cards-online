@@ -11,8 +11,11 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Deck of Cards Online
+          <Typography
+            variant="h1"
+            component="div"
+            sx={{ flexGrow: 1, fontSize: "30px" }}>
+            A DECK OF CARDS
           </Typography>
           <IconButton
             size="large"
