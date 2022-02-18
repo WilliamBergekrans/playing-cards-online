@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-export default function JoinGame() {
+export default function JoinGameButton() {
   return (
     <Box
       component="form"
@@ -13,10 +13,12 @@ export default function JoinGame() {
       autoComplete="off">
       <div>
         <TextField
-          id="filled-search"
-          label="Game Id#"
-          type="search"
-          variant="filled"
+          id="game-id-form"
+          focused
+          label="Game ID"
+          color="secondary"
+          type="text"
+          inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
         />
       </div>
     </Box>

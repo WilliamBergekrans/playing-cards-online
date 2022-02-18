@@ -5,7 +5,7 @@ import StartView from "./components/StartView";
 
 const App = () => {
   return (
-    <Container>
+    <Container maxWidth="md">
       <Navbar />
       <StartView />
     </Container>

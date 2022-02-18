@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import JoinGame from "./JoinGame";
+import JoinGameButton from "./JoinGameButton";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 
@@ -19,13 +19,14 @@ export default function StartView() {
       <Typography variant="h1" fontSize={"30px"} sx={{ my: "30px" }}>
         Enter ID to join
       </Typography>
-      <JoinGame />
+      <JoinGameButton />
       <Typography variant="h1" fontSize={"30px"} sx={{ my: "30px" }}>
         Or
       </Typography>
       <Button
         variant="outlined"
         size="large"
+        color="secondary"
         onClick={() => {
           console.log("clicked");
         }}>
