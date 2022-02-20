@@ -12,10 +12,10 @@ export default function Game() {
 
   return (
     <Grid container spacing={2} sx={{ textAlign: "center" }}>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <h4>{cardOnTable}</h4>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <h4>{playedCard}</h4>
       </Grid>
       <Grid item xs={12}>
