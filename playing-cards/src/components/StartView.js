@@ -2,8 +2,8 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import JoinGameButton from "./JoinGameButton";
 import { Box } from "@mui/system";
-import { Button } from "@mui/material";
-import Game from "./Game";
+import { Link } from "react-router-dom";
+import "../index.css";
 
 export default function StartView() {
   return (
@@ -24,16 +24,9 @@ export default function StartView() {
       <Typography variant="h1" fontSize={"30px"} sx={{ my: "30px" }}>
         Or
       </Typography>
-      <Button
-        variant="outlined"
-        size="large"
-        color="secondary"
-        onClick={() => {
-          console.log("clicked");
-        }}>
+      <Link to="/game" className="joinGameButton">
         Create new game
-      </Button>
-      <Game />
+      </Link>
     </Box>
   );
 }

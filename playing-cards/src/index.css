@@ -1,0 +1,9 @@
+.joinGameButton {
+  color: black;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: larger;
+  text-decoration: none;
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 15px;
+}
