@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 const App = () => {
   return (
     <Container maxWidth="md">
-      <Navbar />
-      {/* Router */}
       <BrowserRouter>
+        <Navbar />
+        {/* Router */}
         <Routes>
           <Route path="/" element={<StartView />}></Route>
           <Route path="/game" element={<Game />}></Route>

@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 export default function ButtonAppBar() {
   return (
@@ -14,8 +15,14 @@ export default function ButtonAppBar() {
           <Typography
             variant="h1"
             component="div"
-            sx={{ flexGrow: 1, fontSize: "30px", font: "Roboto" }}>
-            A DECK OF CARDS
+            sx={{
+              flexGrow: 1,
+              fontSize: "30px",
+              font: "Roboto",
+            }}>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              A DECK OF CARDS
+            </Link>
           </Typography>
           <IconButton
             size="large"
