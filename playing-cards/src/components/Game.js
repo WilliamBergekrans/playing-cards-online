@@ -5,10 +5,11 @@ import { Grid } from "@mui/material";
 export default function Game() {
   const [cardsOnHand, setCardsOnHand] = useState([1, 2, 3, 4, 5]);
   const [cardOnTable, setCardOnTable] = useState(9);
-  const [playedCard, setPlayedCard] = useState(10);
+  const [playedCard, setPlayedCard] = useState(0);
   const [won, setWon] = useState(2);
   const [lost, setLost] = useState(1);
   const [cardRemaining, setCardRemaining] = useState(50);
+  const [yourTurn, setTurn] = useState(true);
 
   return (
     <Grid container spacing={2} sx={{ textAlign: "center" }}>
@@ -16,7 +17,11 @@ export default function Game() {
         <h4>{cardOnTable}</h4>
       </Grid>
       <Grid item xs={12} sm={6}>
-        <h4>{playedCard}</h4>
+        {playedCard !== 0 ? (
+          <h4>{playedCard}</h4>
+        ) : (
+          <h4>Choose a card to play!</h4>
+        )}
       </Grid>
       <Grid item xs={12}>
         <h4>{cardsOnHand}</h4>
