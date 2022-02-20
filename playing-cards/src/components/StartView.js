@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import JoinGameButton from "./JoinGameButton";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
+import Game from "./Game";
 
 export default function StartView() {
   return (
@@ -32,6 +33,7 @@ export default function StartView() {
         }}>
         Create new game
       </Button>
+      <Game />
     </Box>
   );
 }

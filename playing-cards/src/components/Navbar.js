@@ -14,7 +14,7 @@ export default function ButtonAppBar() {
           <Typography
             variant="h1"
             component="div"
-            sx={{ flexGrow: 1, fontSize: "30px" }}>
+            sx={{ flexGrow: 1, fontSize: "30px", font: "Roboto" }}>
             A DECK OF CARDS
           </Typography>
           <IconButton
