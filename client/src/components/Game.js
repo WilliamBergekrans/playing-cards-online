@@ -17,11 +17,7 @@ export default function Game() {
         <h4>{cardOnTable}</h4>
       </Grid>
       <Grid item xs={12} sm={6}>
-        {playedCard !== 0 ? (
-          <h4>{playedCard}</h4>
-        ) : (
-          <h4>Choose a card to play!</h4>
-        )}
+        {playedCard !== 0 ? <h4>{playedCard}</h4> : <h4>Opponents turn</h4>}
       </Grid>
       <Grid item xs={12}>
         <h4>{cardsOnHand}</h4>
