@@ -15,7 +15,7 @@ const {
 } = require("firebase-admin/firestore");
 
 // Firestore Connection
-const serviceAccount = require("./path/to/serviceAccountKey.json");
+const serviceAccount = require("./serviceAccountKey.json");
 
 initializeApp({
   credential: cert(serviceAccount),
@@ -23,7 +23,7 @@ initializeApp({
 
 const db = getFirestore();
 
-app.get("/game/create", (req, res) => {
+app.get("/game/create", async (req, res) => {
   const docRef = db.collection("games").doc("newGame");
 
   await docRef.set({
@@ -33,7 +33,7 @@ app.get("/game/create", (req, res) => {
     player2: "William",
   });
 
-  res.send("Hello World!");
+  res.send("Game number 1 created!");
 });
 
 app.get("/game/:id", (req, res) => {
