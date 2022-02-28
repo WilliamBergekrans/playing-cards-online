@@ -2,7 +2,37 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
+const {
+  initializeApp,
+  applicationDefault,
+  cert,
+} = require("firebase-admin/app");
+
+const {
+  getFirestore,
+  Timestamp,
+  FieldValue,
+} = require("firebase-admin/firestore");
+
+// Firestore Connection
+const serviceAccount = require("./path/to/serviceAccountKey.json");
+
+initializeApp({
+  credential: cert(serviceAccount),
+});
+
+const db = getFirestore();
+
+app.get("/game/create", (req, res) => {
+  const docRef = db.collection("games").doc("newGame");
+
+  await docRef.set({
+    id: 1,
+    type: "Lovelace",
+    player1: "Annika",
+    player2: "William",
+  });
+
   res.send("Hello World!");
 });
 
